@@ -1,0 +1,111 @@
+-------------------------------------------------------------------
+Mon Jun 24 13:20:40 UTC 2024 - ecsos <ecsos@opensuse.org>
+
+- Update to 5.2.5
+  * fixed errors with outdated grub2 scripts (wont be executed anymore)
+- Changes from 5.2.4
+  * fixed empty if statement problem of generated code
+- Changes from 5.2.3
+  * fixed CRLF problem
+
+-------------------------------------------------------------------
+Sat Feb 11 11:39:27 UTC 2023 - ecsos <ecsos@opensuse.org>
+
+- Update to 5.2.2
+  * g++-12 compatibility fix
+- Changes from 5.2.1
+  * small bugfix / optimization
+- Changes from 5.2.0
+  * changed /etc/grub.d/bin/grubcfg_proxy to a shell script, resolving update issues this way
+- Changes from 5.1.0
+  * version info (-v)
+  * some internal changes
+  * translation updates
+
+-------------------------------------------------------------------
+Tue Sep 11 16:39:45 UTC 2018 - ecsos@opensuse.org
+
+- update to 5.0.8
+  * fixed error of mounttable parser
+- changes from 5.0.7
+  * artful hotfix (wayland)
+- changes from 5.0.6
+  * preventing plaintext entries from being moved into submenu 
+    (when they are not visible)
+  * fixed some errors on entry editor
+- changes from 5.0.5
+  * fixed some errors on entry editor
+  * fixed error on trash view when selecting rule behind submenu
+- changes from 5.0.4
+  * fixed error on entry deletion
+- changes from 5.0.3
+  * fixed error when removing theme file
+- changes from 5.0.2
+  * fixed errors when using theme editor
+- changes from 5.0.1
+  * fixed error on startup when default entry selected
+- changes from 5.0.0
+  * improved default os selector
+  * improved entry editor
+  * added c++11 support
+  * internal improvements and fixes
+
+-------------------------------------------------------------------
+Fri Jun 13 14:13:06 UTC 2014 - ecsos@opensuse.org
+
+- Update to version 4.0.6
+  
+  version 4.0.6  
+    + showing save errors
+    + fixed background image flicker bug in trusty 
+      (image was reset to previous one when choosing 
+      inside of image selection window)
+
+  version 4.0.5
+    + copyright fix: added OpenSSL exemption
+
+  version 4.0.4
+    + improved grub-cfg parser - handling of encapsulated menuentries
+    + conflict resolution on startup (renumerate when there's 
+      something like 10_linux and 10_linux_proxy)
+    + fixed some errors of script update detector
+
+  version 4.0.3
+    + translation updates
+    + theme packages: correct import from subdirectories
+
+  version 4.0.2
+    + fixed some scriptUpdate related problems
+
+  version 4.0.1
+    + error when there's a visible menuentry 
+      below a hidden submenu - fixed
+
+  verseion 4.0
+    + hiding placeholders
+    + view options
+    + improved trash view
+    + GTKmm 3.0
+    + Theming
+    + improved appearance settings
+    + script replacement detection (no more duplicates 
+      when grub scripts are replaced by an update of grub)
+    + backup creation on first run (allows simple restoring 
+      of the default config)
+    + more help texts
+    + fallback on systems without grub-mkdevicemap/device.map 
+      (better compatibility)
+
+-------------------------------------------------------------------
+Wed Apr 17 07:46:47 UTC 2013 - johann.luce@wanadoo.fr
+
+- Update to version 3.0.4
+  + fixed assertion of compare_proxies
+  + add lang package
+  + fix warning in OBS
+
+-------------------------------------------------------------------
+Thu Dec 27 12:12:23 UTC 2012 - johann.luce@wanadoo.fr
+
+-first on opensuse 
+

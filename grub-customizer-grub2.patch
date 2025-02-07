@@ -1,0 +1,30 @@
+Index: grub-customizer-5.0.8/src/Model/Env.hpp
+===================================================================
+--- grub-customizer-5.0.8.orig/src/Model/Env.hpp
++++ grub-customizer-5.0.8/src/Model/Env.hpp
+@@ -89,17 +89,17 @@ public:
+ 				this->loadFromFile(grub_cfg, dir_prefix);
+ 				fclose(grub_cfg);
+ 			} else { // otherwise use the built-in config
+-				this->mkconfig_cmd = "grub-mkconfig";
+-				this->install_cmd = "grub-install";
+-				this->mkfont_cmd = "grub-mkfont";
+-				this->mkdevicemap_cmd = "grub-mkdevicemap --device-map=/dev/stdout";
++				this->mkconfig_cmd = "/usr/sbin/grub2-mkconfig";
++				this->install_cmd = "/usr/sbin/grub2-install";
++				this->mkfont_cmd = "/usr/bin/grub2-mkfont";
++				this->mkdevicemap_cmd = "/usr/sbin/grub-mkdevicemap --device-map=/dev/stdout";
+ 				this->cfg_dir = dir_prefix+"/etc/grub.d";
+ 				this->cfg_dir_noprefix = "/etc/grub.d";
+-				this->output_config_dir = dir_prefix+"/boot/grub";
+-				this->output_config_dir_noprefix = "/boot/grub";
+-				this->output_config_file = dir_prefix+"/boot/grub/grub.cfg";
++				this->output_config_dir = dir_prefix+"/boot/grub2";
++				this->output_config_dir_noprefix = "/boot/grub2";
++				this->output_config_file = dir_prefix+"/boot/grub2/grub.cfg";
+ 				this->settings_file = dir_prefix+"/etc/default/grub";
+-				this->devicemap_file = dir_prefix+"/boot/grub/device.map";
++				this->devicemap_file = dir_prefix+"/boot/grub2/device.map";
+ 			}
+ 			} break;
+ 		}
