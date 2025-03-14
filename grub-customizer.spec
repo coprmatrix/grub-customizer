@@ -28,7 +28,7 @@ Patch2:     %{name}-grub2.patch
 BuildRequires:  cmake
 BuildRequires:  fdupes
 BuildRequires:  make
-BuildRequires:  grub2
+#BuildRequires:  grub2
 BuildRequires:  pkgconfig
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(gdkmm-3.0)
@@ -61,8 +61,8 @@ BuildArch: noarch
 %autosetup  -p1
 
 %build
-cmake -DCMAKE_CXX_FLAGS="-std=c++11" \
-      -DCMAKE_INSTALL_PREFIX=%{_prefix} .
+cmake -DCMAKE_CXX_FLAGS="-std=c++11" -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -DCMAKE_INSTALL_PREFIX=%{_prefix} . 
 make %{?_smp_mflags} 
 
 %install
