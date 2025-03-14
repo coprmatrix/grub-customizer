@@ -13,8 +13,7 @@
 # published by the Open Source Initiative.
 
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
-
+%global debug_package %{nil}
 Name:       grub-customizer
 Version:    5.2.5
 Release:    0
