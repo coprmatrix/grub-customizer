@@ -32,9 +32,9 @@ BuildRequires:  make
 BuildRequires:  grub2
 BuildRequires:  pkgconfig
 BuildRequires:  gcc-c++
-BuildRequires:  gtkmm3-devel
-BuildRequires:  libarchive-devel
-BuildRequires:  libopenssl-devel
+BuildRequires:  pkgconfig(gdkmm-3.0)
+BuildRequires:  pkgconfig(libarchive) 
+BuildRequires:  pkgconfig(openssl)
 
 # If requires xdg-utils, xdgsu -c should than insert in grub-customizer.destop
 # Requires:       xdg-utils
@@ -51,7 +51,12 @@ Features:
  * settings like default operating system, kernel params, background image and text colors etc.
  * changing the installed operating system by running on a live cd
 
-%lang_package
+%package lang
+Summary: Lang package for %{name}
+BuildArch: noarch
+
+%description lang
+%{summary}.
 
 %prep
 %autosetup  -p1
